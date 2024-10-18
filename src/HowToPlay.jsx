@@ -10,8 +10,7 @@ function Htp() {
   const [status, setStatus] = useState(false);
   const [gameRates, setGameRates] = useState([]);
   const divStyle = {
-     // Adjust the border width and color as needed
-    padding: "20px", // Optional: Adding padding for better visibility
+    padding: "20px",
     borderBottom: '2px solid white'
   };
   const navbarStyle = {
@@ -21,7 +20,6 @@ function Htp() {
     position: "relative",
   };
   const backStyle = {
-    // backgroundImage: `url(${topBackground})`,
     backgroundSize: 'cover', // This will make the background image cover the container without 
     backgroundPosition: 'center',
     position:'relative'

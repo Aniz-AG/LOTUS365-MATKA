@@ -353,7 +353,7 @@ function Single() {
               return (
                 <div key={index} className="w-full flex mb-3 ">
                   <div
-                    className="shadow-md w-10/12  p-1  border border-black-500 bg-white text-white font-bold flex justify-between"
+                    className="shadow-md w-10/12  p-1  border border-black-500 bg-white text-black font-bold flex justify-between"
                     style={{ borderRadius: "25px" }}
                   >
                     <div className="flex flex-col items-center ml-4">

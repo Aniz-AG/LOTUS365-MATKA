@@ -2,11 +2,13 @@ import logo from "./assets/ICONS AND BACKGROUNDS/Transparent logo.png";
 import whatsapp from './assets/ICONS AND BACKGROUNDS/whatsapp.png'; // Import the WhatsApp icon
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { useState, useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "./Util/loginSlice";
 import { addPass } from "./Util/passslice";
 import bgImage from "./assets/ICONS AND BACKGROUNDS/login signup back.png";
+import useGameFront from "./Hooks/useGameFront";
 
 function Login() {
   const [formErrors, setFormErrors] = useState({});
@@ -18,6 +20,19 @@ function Login() {
   const password = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const token = useSelector((state) => state.userDetail.token);
+
+  const resinfo = useGameFront(token);
+
+  const [adminPhone, setAdminPhone] = useState('');
+
+  useEffect(() => {
+    if (resinfo) {
+      setAdminPhone(resinfo["mobile_1"] || "1234567890"); // Fallback if no mobile is found
+    }
+  }, [resinfo]);
+  const whatsappUrl = `https://wa.me/${adminPhone}`;
 
   useEffect(() => {
     const fetchPhoneNumber = async () => {
@@ -106,9 +121,6 @@ function Login() {
       throw new Error("Invalid username and password");
     }
   };
-
-  // WhatsApp functionality
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
     <div style={{ 

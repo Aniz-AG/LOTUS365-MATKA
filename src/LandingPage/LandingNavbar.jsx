@@ -37,6 +37,8 @@ import { IoMdPeople } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
 import { LuLogIn } from "react-icons/lu";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 function LandingNavbar() {
   const Hamburg = {
@@ -80,7 +82,7 @@ function LandingNavbar() {
       <div className="container flex mx-auto flex-1 justify-between items-center ">
         <div className="flex items-center ">
           <div onClick={handleHamburgerClick} style={Hamburg} className="mr-4">
-            <img src={HamburgerIcon} alt="Hamburger Icon" className="w-8 h-8" />
+            <GiHamburgerMenu className="w-[40px] h-[30px]"/>
           </div>
 
           <div className="text-xl fading-text">

@@ -24,7 +24,7 @@ import share_icon from "./Images/share_icon.png";
 import policy from "./Images/policy.png";
 import telegram_icon from "./Images/telegram_icon.png";
 import acc from "./Images/acc.png";
-
+import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "./Util/loginSlice";
@@ -105,7 +105,7 @@ function Navbar() {
       <div className="container flex mx-auto flex-1 justify-between items-center ">
         <div className="flex items-center ">
           <div onClick={handleHamburgerClick} style={Hamburg} className="mr-4">
-            <img src={HamburgerIcon} alt="Hamburger Icon" className="w-8 h-8" />
+            <GiHamburgerMenu className="w-[40px] h-[30px]"/>
           </div>
 
           <div className="text-xl fading-text">

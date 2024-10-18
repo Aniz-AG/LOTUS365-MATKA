@@ -21,13 +21,11 @@ function LandingImp() {
   const navigate = useNavigate();
   const [showSupport, setShowSupport] = useState(false);
   
-  // Fetch token and user details from Redux state
+
   const token = useSelector((state) => state.userDetail.token);
-  
-  // Use custom hook to get game front data
+
   const resinfo = useGameFront(token);
-  
-  // State to store phone and Telegram numbers
+
   const [phoneNumber, setPhoneNumber] = useState('');
   const [telegramNumber, setTelegramNumber] = useState('');
 
