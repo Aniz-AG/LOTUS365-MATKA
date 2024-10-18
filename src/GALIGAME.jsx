@@ -91,13 +91,13 @@ function GALIGAME() {
                   <img
                     src={open}
                     alt="Play Now"
-                    className="h-[30px]"
+                    className="h-[32px]"
                   />
                 ) : (
                   <img
                     src={closed}
                     alt="Closed"
-                    className="h-[28px]"
+                    className="h-[32px]"
                   />
                 )}
               </button>

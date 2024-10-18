@@ -84,7 +84,7 @@ function StarlineGame() {
                 <img
                   src={game.msg_status === 1 ? open : closed}
                   alt={game.msg_status === 1 ? "Play Now" : "Closed"}
-                  className="h-[30px]"
+                  className="h-[32px]"
                 />
               </button>
             </div>
